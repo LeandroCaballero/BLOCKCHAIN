@@ -1,0 +1,8 @@
+npm install express -g
+npm install express-generator -g
+express "nombre"
+cd web
+npm install
+npm start
+
+

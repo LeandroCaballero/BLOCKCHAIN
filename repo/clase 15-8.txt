@@ -1,0 +1,3 @@
+GET / HTTP/1.1
+metodo recurso protocolo
+Pudimos observar como funciona la conexion (pasos) del protocolo HTTP, es decir: conexion, request, response y close. Para esto utilizamos la herramienta Putty.
