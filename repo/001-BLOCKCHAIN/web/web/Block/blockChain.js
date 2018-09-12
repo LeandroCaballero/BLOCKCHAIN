@@ -2,9 +2,9 @@ let Block = require("./bloque")
 
 
 class BlockChain {
-    constructor(genesis, dificultad = '00') {
+    constructor(genesis) {
         this.chain = [this.createFirstBlock(genesis)];
-        this.dificultad = dificultad;
+        this.dificultad = 3;
     }
     createFirstBlock(genesis) {
         return new Block(0, genesis);
