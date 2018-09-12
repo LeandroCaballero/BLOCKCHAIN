@@ -1,6 +1,6 @@
 class Transaccion {
 
-    constructor(alumno,email, profesor, materia, dia) {
+    constructor(alumno, email, materia, profesor, dia) {
         this.alumno = alumno;
         this.email = email;
         this.profesor = profesor;
