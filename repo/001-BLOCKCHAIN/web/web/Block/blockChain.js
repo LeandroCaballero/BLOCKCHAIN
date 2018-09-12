@@ -19,19 +19,19 @@ class BlockChain {
         console.log('MINADO!' + block.hash + 'con nonce' + block.nonce)
         this.chain.push(block); 
     }
-    validar() {
-        for (let i = 1; i < this.chain.length; i++) {
-            let prevBlock = this.chain[i - 1];
-            let currBlock = this.chain[i];
+    // validar() {
+    //     for (let i = 1; i < this.chain.length; i++) {
+    //         let prevBlock = this.chain[i - 1];
+    //         let currBlock = this.chain[i];
 
-            if (currBlock.previousHash != prevBlock.hash)
-                return false;
+    //         if (currBlock.previousHash != prevBlock.hash)
+    //             return false;
 
-            if (currBlock.createHash() != currBlock.hash)
-                return false;
-        }
-        return true;
-    }
+    //         if (currBlock.createHash() != currBlock.hash)
+    //             return false;
+    //     }
+    //     return true;
+    // }
 
 }
 
