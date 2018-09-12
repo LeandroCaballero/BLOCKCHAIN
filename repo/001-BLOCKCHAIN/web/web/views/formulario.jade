@@ -1,15 +1,53 @@
-form(method='POST' action='/formulario/registrar' )
-          div.form-group
-            label(for='nombre') Nombre:
-            input#nombre.form-control(type='text', placeholder='Nombre y apellido' name='nombre')
-         
-         
-          div.form-group
-            label(for='email') Email:
-            input#email.form-control(type='email', placeholder='Ej. pedro@hotmail.com' name='email')
-         
-          div.form-group
-            label(for='edad') Edad:
-            input#edad.form-control(type='number', placeholder='Edad' name='edad')
-          
-          button.btn.btn-primary(type='submit') Enviar
+doctype html(lang='en')
+head
+    meta(charset='UTF-8')
+   
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+     
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+   
+    title Formulario
+
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel="stylesheet", href="/css/formulario.css")
+
+  body
+    form(method='POST', action='formulario/respuesta')
+      
+      legend Tus datos
+    
+      label(for='alumno', class="in") 
+      input#nombre(type='text', name='alumno', placeholder='Nombre y Apellido', autocomplete='on')
+      br
+      br
+       
+      label(for='email', class="in") 
+      input#email(type='email', name='email', placeholder='email@dominio.com')
+  
+      br
+      br
+
+      
+      // Informacion de la Tutoria
+      legend Informacion de la Tutoria
+
+      label(for='materia', class="in")  
+      input#materia(type='text', name='materia', placeholder='Materia', autocomplete='on')
+      br
+      br
+      label(for='profesor', class="in") 
+      input#profesor(type='text', name='profesor', placeholder='Profesor', autocomplete='on')
+
+      
+      // Fecha y Hora
+      legend Fecha y Hora
+
+      label(for='fecha', class="in") 
+      input#fecha(type='date', name='fecha')        
+               
+      br
+      br
+      input(type='submit', value='Enviar' class="boton")
+      button(type='reset' class="reset") Borrar
+
+      

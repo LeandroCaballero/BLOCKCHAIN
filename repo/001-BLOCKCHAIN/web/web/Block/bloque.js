@@ -20,7 +20,7 @@ class Block {
             this.hash = this.createHash();
         }
     }
-
+    
 }
 
 module.exports = Block;

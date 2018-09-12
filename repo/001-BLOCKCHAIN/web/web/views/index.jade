@@ -1,5 +1,23 @@
-extends layout
+doctype html(lang='en')
+head
+    meta(charset='UTF-8')   
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')   
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')  
+    title Tutoria
+    |    
 
-block content
-  h1= title
-  p Welcome to #{title}
+    link(rel='stylesheet', href="/css/home.css")
+    
+  body
+    .page
+      .container
+        .brand
+          h1.brand_name
+            img(src='images/UCP2.png', alt='UCP Logo', width='250px')                   
+            .header_cnt
+              h3
+                strong ¿Dudas sobre temas de alguna materia?                      
+              h5
+                span
+                  strong !No te preocupes! Pedi ya una tutoria                          
+              a.btn(href='blockchain/formulario') Pedir Tutoria
