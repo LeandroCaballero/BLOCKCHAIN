@@ -4,7 +4,7 @@ let Block = require("./bloque")
 class BlockChain {
     constructor(genesis) {
         this.chain = [this.createFirstBlock(genesis)];
-        this.dificultad = 3;
+        this.zero_count = 3;
     }
     createFirstBlock(genesis) {
         return new Block(0, genesis);
@@ -15,7 +15,7 @@ class BlockChain {
     addBlock(data) {
         let prevBlock = this.getLastBlock();
         let block = new Block(prevBlock.index + 1, data, prevBlock.hash)
-        block.minar(this.dificultad);
+        block.minar(this.zero_count);
         //console.log('MINADO!' + block.hash + 'con nonce' + block.nonce)
         this.chain.push(block); 
     }

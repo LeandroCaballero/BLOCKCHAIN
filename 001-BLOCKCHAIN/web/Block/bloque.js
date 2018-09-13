@@ -20,22 +20,19 @@ class Block {
     //         this.hash = this.createHash();
     //     }
     // }
-    createHash(){
-        return SHA256(this.index + this.data + this.date.toString() + this.nonce).toString();
-    }
 
-    minar(dificultad){
+    minar(zero_count){
         var c = 50
         var i
         
-        while (c !== dificultad){
+        while (c !== zero_count){
             c = 0
             for (i = 0; i < this.hash.length; i++) {
                 if (this.hash.charAt(i) == "7"){
                   c++;     
                 }    
             } 
-            if (c == dificultad){
+            if (c == zero_count){
                 console.log("MINADO!: "+this.hash);
                 console.log("Nonce: "+this.nonce);
             } else {
